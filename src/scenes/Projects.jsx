@@ -1,5 +1,12 @@
 import LineGradient from "../components/LineGradient"
 import { motion } from "framer-motion"
+import project1 from "../assets/project-1.jpeg"
+import project2 from "../assets/project-2.jpeg"
+import project3 from "../assets/project-3.jpeg"
+import project4 from "../assets/project-4.jpeg"
+import project5 from "../assets/project-5.jpeg"
+import project6 from "../assets/project-6.jpeg"
+import project7 from "../assets/project-7.jpeg"
 
 
 const container = {
@@ -16,7 +23,7 @@ const projectVariant = {
 
 const Project = ({ title }) => {
     const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex flex-col justify0center items-center text-center p-16 text-deep-blue`
-    const projectTitle = title.split(" ").join("-").toLowerCase()
+
 
     return (
         <motion.div variants={projectVariant} className="relative"> 
@@ -29,7 +36,7 @@ const Project = ({ title }) => {
                     porttitor accumsan tincidunt.
                 </p>
             </div>
-            <img src={require(`../assets/${projectTitle}.jpeg`)} alt={projectTitle} />
+            <img src={title} alt={title} />
         </motion.div>   
     )
 }
@@ -79,15 +86,15 @@ const Projects = () => {
             >
                 BEAUTIFUL USER INTERFACES
             </div>
-            <Project title="Project 1" />
-            <Project title="Project 2" />
+            <Project title={project1} />
+            <Project title={project2} />
             
-            <Project title="Project 3" />
-            <Project title="Project 4" />
-            <Project title="Project 5" />
+            <Project title={project3} />
+            <Project title={project4} />
+            <Project title={project5} />
 
-            <Project title="Project 6" />
-            <Project title="Project 7" />
+            <Project title={project6} />
+            <Project title={project7}/>
 
             <div
             className="flex justify-center text-center items-center p-10 bg-blue
